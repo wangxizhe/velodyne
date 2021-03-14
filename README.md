@@ -26,9 +26,13 @@ testing has not been completed in those environments.
   sudo apt-get install ros-kinetic-velodyne
   mkdir -p velodyneDriver/src && cd velodyneDriver/src
   git clone https://github.com/wangxizhe/velodyne.git
-  cd velodyne/
-  git checkout -b neuav origin/neuav
   cd ../..
-  rosdep install --from-paths src --ignore-src --rosdistro kinetic -y
   catkin_make
 ```
+**运行方法**  
+ ```
+   source devel/setup.bash  
+   64线
+   roslaunch velodyne_pointcloud 64e_S3.launch  
+   16线  
+   roslaunch velodyne_pointcloud VLP16_points.launch  
